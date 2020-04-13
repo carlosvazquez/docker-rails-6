@@ -1,0 +1,5 @@
+development:
+  dev_server:
+    host: webpacker
+    hmr: true
+
