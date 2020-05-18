@@ -12,10 +12,6 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 
 RUN apt-get update && apt-get install -y nodejs yarn postgresql-client
 
-# COPY Gemfile* /usr/src/app/
-# COPY . /usr/src/app/
-# WORKDIR /usr/src/app
-
 ADD Gemfile /usr/src/app/
 ADD Gemfile.lock /usr/src/app/
 WORKDIR /usr/src/app
@@ -24,7 +20,7 @@ ADD . /usr/src/app
 
 RUN bundle install
 
-CMD ["rails", "webpacker:install"]
+CMD [ "rails", "webpacker:install" ]
 
 COPY entrypoint.sh /usr/bin/
 
@@ -37,6 +33,3 @@ EXPOSE 3000
 EXPOSE 5432
 
 # RUN bin/rake assets:precompile
-
-# Start the main process.
-CMD ["rails", "server", "-b", "0.0.0.0"]

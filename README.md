@@ -50,3 +50,4 @@ Things you may want to cover:
 # docker run --rm -v $(pwd):/usr/src/app -w /usr/src/app ruby:2.7.1 bundle lock --update
 # run in silence
 # docker-compose up -d
+# page 96
