@@ -8,4 +8,4 @@ tmp/*
 .byebug_history
 log/*
 tmp/*
-/data/*
+data/*
