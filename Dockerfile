@@ -16,11 +16,11 @@ RUN apt-get update && apt-get install -y nodejs yarn postgresql-client
 # COPY . /usr/src/app/
 # WORKDIR /usr/src/app
 
-ADD Gemfile /app/
-ADD Gemfile.lock /app/
-WORKDIR /app
+ADD Gemfile /usr/src/app/
+ADD Gemfile.lock /usr/src/app/
+WORKDIR /usr/src/app
 RUN bundle install
-ADD . /app
+ADD . /usr/src/app
 
 RUN bundle install
 
